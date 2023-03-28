@@ -9,36 +9,26 @@ public enum AlarmTypeEnum {
     /**
      * 邮件
      */
-    EMAIL(1,I18nUtil.getString("jobinfo_field_email")),
+    EMAIL(1, I18nUtil.getString("jobinfo_field_email")),
 
 
     /**
      * 企业微信
      */
-    ENT_WECHAT(2,I18nUtil.getString("jobinfo_field_entwechat")),
+    ENT_WECHAT(2, I18nUtil.getString("jobinfo_field_entwechat")),
 
-    /**
-     * 飞书
-     */
-    FEI_SHU(3,I18nUtil.getString("jobinfo_field_feishu")),
-
-    /**
-     * 叮叮
-     */
-    DING_DING(4,I18nUtil.getString("jobinfo_field_dingding")),
 
     /**
      * webhook
      */
-    WEBHOOK(5,I18nUtil.getString("jobinfo_field_webhook"));
-
+    WEBHOOK(5, I18nUtil.getString("jobinfo_field_webhook"));
 
 
     private String title;
     private int alarmType;
 
-    AlarmTypeEnum(int alarmType,String title) {
-        this.alarmType=alarmType;
+    AlarmTypeEnum(int alarmType, String title) {
+        this.alarmType = alarmType;
         this.title = title;
     }
 
@@ -51,8 +41,8 @@ public enum AlarmTypeEnum {
     }
 
 
-    public static AlarmTypeEnum match(String name, AlarmTypeEnum defaultItem){
-        for (AlarmTypeEnum item: AlarmTypeEnum.values()) {
+    public static AlarmTypeEnum match(String name, AlarmTypeEnum defaultItem) {
+        for (AlarmTypeEnum item : AlarmTypeEnum.values()) {
             if (item.name().equals(name)) {
                 return item;
             }
