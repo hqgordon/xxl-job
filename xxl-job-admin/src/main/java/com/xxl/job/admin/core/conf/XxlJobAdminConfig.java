@@ -64,7 +64,7 @@ public class XxlJobAdminConfig implements InitializingBean, DisposableBean {
     @Value("${xxl.job.triggerpool.slow.max}")
     private int triggerPoolSlowMax;
 
-    @Value("${xxl.job.logretentiondays}")
+    @Value("${xxl.job.logretentiondays:30}")
     private int logretentiondays;
 
     // dao, service
